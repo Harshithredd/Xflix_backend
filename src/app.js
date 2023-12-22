@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+const httpStatus = require("http-status");
 const routes = require("./routes/v1/index");
 const errorHandler = require("./middlewares/error");
 const cors = require("cors");

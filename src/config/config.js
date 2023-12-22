@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const Joi = require('joi');
 
-dotenv.config({ path: path.join(__dirname, '../../.env') });
+dotenv.config();
 
 const envVarsSchema = Joi.object().keys({
     NODE_ENV: Joi.string()
@@ -23,6 +23,6 @@ const envVarsSchema = Joi.object().keys({
 // }
 module.exports = {
     env:process.env.NODE_ENV,
-    port :process.env.POR,
+    port :process.env.PORT,
     mongoURL : process.env.MONGODB_URL
 }

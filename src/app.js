@@ -4,6 +4,7 @@ app.use(express.json());
 const routes = require("./routes/v1/index");
 const errorHandler = require("./middlewares/error");
 const cors = require("cors");
+const ApiError = require("./utils/ApiError");
 
 app.use(cors());
 

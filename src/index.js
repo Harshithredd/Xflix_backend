@@ -2,13 +2,13 @@ const app= require("./app");
 const mongoose = require("mongoose");
 const config = require("./config/config");
 
-mongoose.connect(config.mongoURL,
+mongoose.connect(process.env.MONGODB_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 ).then(()=>{
-    console.log(`connected to db at ${config.mongoURL}`);
+    console.log(`connected to db at ${process.env.MONGODB_URL}`);
 }).catch((e)=>{
     console.log("errorInDB",e);
 });
